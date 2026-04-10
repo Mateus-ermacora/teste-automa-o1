@@ -19,4 +19,4 @@ Caso de teste 02 - Pesquisa de um Produto
     Acessar a home page do site Amazon.com.br
     Digitar o nome do produto "Playstation 5" na barra de pesquisa
     Clicar no botão de pesquisa
-    # Verificar o resultado da pesquisa se está listando o produto pesquisado
+    Verificar o resultado da pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital"

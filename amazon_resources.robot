@@ -31,3 +31,5 @@ Digitar o nome do produto "${NOME_PRODUTO}" na barra de pesquisa
     Input Text    locator=twotabsearchtextbox  text=${NOME_PRODUTO}
 Clicar no botão de pesquisa
     Click Button  locator=nav-search-submit-button
+Verificar o resultado da pesquisa se está listando o produto "${NOME_PRODUTO}"
+    Wait Until Page Contains   text=${NOME_PRODUTO}
