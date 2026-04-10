@@ -9,10 +9,11 @@ ${TEXTO_VENDAS}    para começar a usar qualquer logística da Amazon
 
 *** Keywords ***
 Abrir o navegador
-    Open Browser   browser=headlesschrome
+    Open Browser   browser=chrome
     Set Window Size    1366  768 
 
 Fechar o navegador
+    Capture page Screenshot
     Close Browser
 
 Acessar a home page do site Amazon.com.br
@@ -25,3 +26,8 @@ Entrar no menu "Venda na Amazon"
 Verificar se aparece a frase "para começar a usar qualquer logística da Amazon"
     Wait Until Page Contains   text=${TEXTO_VENDAS}
     Wait Until Element Is Visible  locator=${HEADER_VENDAS} 
+
+Digitar o nome do produto "${NOME_PRODUTO}" na barra de pesquisa
+    Input Text    locator=twotabsearchtextbox  text=${NOME_PRODUTO}
+Clicar no botão de pesquisa
+    Click Button  locator=nav-search-submit-button
