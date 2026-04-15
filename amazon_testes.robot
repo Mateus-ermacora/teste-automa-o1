@@ -2,7 +2,7 @@
 Documentation   Essa suíte testa o site da Amazon.com.br
 Resource        amazon_resources.robot
 Test Setup      Abrir o navegador
-Test Teardown   Fechar o navegador
+# Test Teardown   Fechar o navegador
 
 *** Test Cases ***
 
@@ -20,3 +20,26 @@ Caso de teste 02 - Pesquisa de um Produto
     Digitar o nome do produto "Playstation 5" na barra de pesquisa
     Clicar no botão de pesquisa
     Verificar o resultado da pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital"
+
+
+Caso de Teste 03 - Adicionar Produto no Carrinho
+    [Documentation]    Esse teste verifica a adição de um produto no carrinho de compras
+    [Tags]             adicionar_carrinho
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome do produto "Playstation 5" na barra de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital"
+    Adicionar o produto "Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5" no carrinho
+    Verificar se o produto "Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5" foi adicionado com sucesso
+ 
+Caso de Teste 04 - Remover Produto do Carrinho
+    [Documentation]    Esse teste verifica a remoção de um produto no carrinho de compras
+    [Tags]             remover_carrinho
+    Acessar a home page do site Amazon.com.br
+    Digitar o nome do produto "Playstation 5" na barra de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital"
+    Adicionar o produto "Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5" no carrinho
+    Verificar se o produto "Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5" foi adicionado com sucesso
+    Remover o produto "Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5" do carrinho
+    Verificar se o carrinho fica vazio

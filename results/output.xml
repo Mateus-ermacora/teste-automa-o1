@@ -1,81 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-10T17:55:15.903701" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-15T11:31:30.574732" rpa="false" schemaversion="5">
 <suite id="s1" name="Web Testing" source="C:\Users\mateu\OneDrive\Área de Trabalho\Curso Udemy\RobotFramework\Web Testing">
 <suite id="s1-s1" name="Amazon Testes" source="C:\Users\mateu\OneDrive\Área de Trabalho\Curso Udemy\RobotFramework\Web Testing\amazon_testes.robot">
-<test id="s1-s1-t1" name="Caso de teste 02 - Pesquisa de um Produto" line="16">
+<test id="s1-s1-t1" name="Caso de Teste 04 - Remover Produto do Carrinho" line="35">
 <kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-10T17:55:16.126421" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-15T11:31:30.808843" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-10T17:55:16.126012" elapsed="0.612019"/>
+<status status="PASS" start="2026-04-15T11:31:30.808519" elapsed="0.607703"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1366</arg>
 <arg>768</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-04-10T17:55:16.738518" elapsed="0.022979"/>
+<status status="PASS" start="2026-04-15T11:31:31.416538" elapsed="0.023268"/>
 </kw>
-<status status="PASS" start="2026-04-10T17:55:16.125126" elapsed="0.636630"/>
+<status status="PASS" start="2026-04-15T11:31:30.807743" elapsed="0.632312"/>
 </kw>
 <kw name="Acessar a home page do site Amazon.com.br" owner="amazon_resources">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-10T17:55:16.763886" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<msg time="2026-04-15T11:31:31.441277" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
 <arg>url=${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-10T17:55:16.763438" elapsed="0.525701"/>
+<status status="PASS" start="2026-04-15T11:31:31.440979" elapsed="1.981187"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>locator=${MENU_VENDAS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-04-10T17:55:17.289674" elapsed="1.816985"/>
+<status status="PASS" start="2026-04-15T11:31:33.422482" elapsed="0.114271"/>
 </kw>
-<status status="PASS" start="2026-04-10T17:55:16.762697" elapsed="2.344352"/>
+<status status="PASS" start="2026-04-15T11:31:31.440464" elapsed="2.096550"/>
 </kw>
 <kw name="Digitar o nome do produto &quot;Playstation 5&quot; na barra de pesquisa" owner="amazon_resources" source_name="Digitar o nome do produto &quot;${NOME_PRODUTO}&quot; na barra de pesquisa">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-10T17:55:19.109420" level="INFO">Typing text 'Playstation 5' into text field 'twotabsearchtextbox'.</msg>
+<msg time="2026-04-15T11:31:33.538531" level="INFO">Typing text 'Playstation 5' into text field 'twotabsearchtextbox'.</msg>
 <arg>locator=twotabsearchtextbox</arg>
 <arg>text=${NOME_PRODUTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-10T17:55:19.108693" elapsed="0.232902"/>
+<status status="PASS" start="2026-04-15T11:31:33.538071" elapsed="0.162950"/>
 </kw>
-<status status="PASS" start="2026-04-10T17:55:19.107735" elapsed="0.234142"/>
+<status status="PASS" start="2026-04-15T11:31:33.537496" elapsed="0.163737"/>
 </kw>
 <kw name="Clicar no botão de pesquisa" owner="amazon_resources">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-04-10T17:55:19.343133" level="INFO">Clicking button 'nav-search-submit-button'.</msg>
+<msg time="2026-04-15T11:31:33.702904" level="INFO">Clicking button 'nav-search-submit-button'.</msg>
 <arg>locator=nav-search-submit-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-10T17:55:19.342799" elapsed="1.581937"/>
+<status status="PASS" start="2026-04-15T11:31:33.702261" elapsed="1.689011"/>
 </kw>
-<status status="PASS" start="2026-04-10T17:55:19.342300" elapsed="1.582660"/>
+<status status="PASS" start="2026-04-15T11:31:33.701651" elapsed="1.689818"/>
 </kw>
 <kw name="Verificar o resultado da pesquisa se está listando o produto &quot;PlayStation®5 Slim Edição Digital&quot;" owner="amazon_resources" source_name="Verificar o resultado da pesquisa se está listando o produto &quot;${NOME_PRODUTO}&quot;">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>text=${NOME_PRODUTO}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-04-10T17:55:20.926020" elapsed="0.019680"/>
+<status status="PASS" start="2026-04-15T11:31:35.392426" elapsed="0.025741"/>
 </kw>
-<status status="PASS" start="2026-04-10T17:55:20.925380" elapsed="0.020554"/>
+<status status="PASS" start="2026-04-15T11:31:35.391879" elapsed="0.026699"/>
 </kw>
-<doc>Esse teste verifica a busca de um produto</doc>
-<tag>busca_produtos</tag>
-<tag>lista_busca</tag>
-<status status="PASS" start="2026-04-10T17:55:16.121064" elapsed="4.825233"/>
+<kw name="Adicionar o produto &quot;Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5&quot; no carrinho" owner="amazon_resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-15T11:31:35.420218" level="INFO">Clicking element 'xpath=//a[contains(.,'Hori Octa Fighting Commander')]'.</msg>
+<arg>xpath=//a[contains(.,'Hori Octa Fighting Commander')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-15T11:31:35.419786" elapsed="2.624024"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-15T11:31:38.044511" level="INFO">Clicking button 'xpath=//*[@id="add-to-cart-button"]'.</msg>
+<arg>xpath=//*[@id="add-to-cart-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-15T11:31:38.044090" elapsed="0.147014"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-04-15T11:31:38.191831" level="INFO">Clicking button 'xpath=//*[@id="attachSiNoCoverage"]/span/input'.</msg>
+<arg>xpath=//*[@id="attachSiNoCoverage"]/span/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-15T11:31:38.191381" elapsed="0.125039"/>
+</kw>
+<status status="PASS" start="2026-04-15T11:31:35.419188" elapsed="2.897497"/>
+</kw>
+<kw name="Verificar se o produto &quot;Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5&quot; foi adicionado com sucesso" owner="amazon_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=Adicionado ao carrinho</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-04-15T11:31:38.317706" elapsed="0.069179"/>
+</kw>
+<status status="PASS" start="2026-04-15T11:31:38.317141" elapsed="0.070100"/>
+</kw>
+<kw name="Remover o produto &quot;Controle sem fio Hori Octa Fighting Commander Para Jogos de Luta para PS5&quot; do carrinho" owner="amazon_resources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=sw-gtc</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-04-15T11:31:38.388405" elapsed="1.986903"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-15T11:31:40.376239" level="INFO">Clicking element 'xpath=//*[@id="sw-gtc"]//a'.</msg>
+<arg>xpath=//*[@id="sw-gtc"]//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-15T11:31:40.375676" elapsed="1.070727"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>xpath=//input[@data-feature-id='item-delete-button']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-04-15T11:31:41.446653" elapsed="0.021030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-15T11:31:41.468436" level="INFO">Clicking element 'xpath=//input[@data-feature-id='item-delete-button']'.</msg>
+<arg>xpath=//input[@data-feature-id='item-delete-button']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-15T11:31:41.467984" elapsed="0.087653"/>
+</kw>
+<status status="PASS" start="2026-04-15T11:31:38.387773" elapsed="3.168234"/>
+</kw>
+<kw name="Verificar se o carrinho fica vazio" owner="amazon_resources">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>text=foi removido de Carrinho de compras.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-04-15T11:31:41.557201" elapsed="0.026850"/>
+</kw>
+<status status="PASS" start="2026-04-15T11:31:41.556509" elapsed="0.027747"/>
+</kw>
+<doc>Esse teste verifica a remoção de um produto no carrinho de compras</doc>
+<tag>remover_carrinho</tag>
+<status status="PASS" start="2026-04-15T11:31:30.805226" elapsed="10.779488"/>
 </test>
 <doc>Essa suíte testa o site da Amazon.com.br</doc>
-<status status="PASS" start="2026-04-10T17:55:15.942314" elapsed="5.008447"/>
+<status status="PASS" start="2026-04-15T11:31:30.614290" elapsed="10.977279"/>
 </suite>
-<status status="PASS" start="2026-04-10T17:55:15.908951" elapsed="5.045129"/>
+<status status="PASS" start="2026-04-15T11:31:30.579665" elapsed="11.015185"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">busca_produtos</stat>
-<stat pass="1" fail="0" skip="0">lista_busca</stat>
+<stat pass="1" fail="0" skip="0">remover_carrinho</stat>
 </tag>
 <suite>
 <stat name="Web Testing" id="s1" pass="1" fail="0" skip="0">Web Testing</stat>
